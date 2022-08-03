@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>
+	<title>favourite movies</title>
+</h:head>
+<h:body>
+		<h:commandButton value="Search Movie" action="#{searchBean.goToSearchPage}" />
+		<h:commandButton value="Favourite Movies" action="favourite-movies" />
+		<h:commandButton value="top 3 movies" action="top-movies" /><br></br>
+		<h:outputText value="#{movieRepository.addFavouriteMovieList}">			
+		</h:outputText><br></br>
+		<h:outputText value="Favourite Movies #{MovieRepository.favouriteMovies}">	
+
+</h:body>
+
+</html>

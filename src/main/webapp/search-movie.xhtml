@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+<h:head>
+	<title>search movie</title>
+</h:head>
+<h:body>
+	<h:form>
+		<h:commandButton value="Search Movie" action="#{searchBean.goToSearchPage}" />
+		<h:commandButton value="Favourite Movies" action="#{searchBean.goToFavouriteMoviesPage}" />
+		<h:commandButton value="top 3 movies" action="top-movies" /><br></br>
+	
+	
+		<h:inputText id="movie" value="#{searchBean.titleUrl}"
+			h:placeholder="your movie to search" />
+		<h:inputText id="year" value="#{searchBean.yearUrl}"
+			h:placeholder="your movie to search" />
+			<h:commandButton value="search movie" action="#{searchBean.searchMovie}" /><br></br>
+		<h:outputText value="Title: #{searchBean.movie.title}">			
+		</h:outputText><br></br>
+		<h:outputText value="Plot: #{searchBean.movie.plot}">			
+		</h:outputText><br></br>
+		<h:outputText value="Genre: #{searchBean.movie.genre}">			
+		</h:outputText><br></br>
+		<h:outputText value="Director: #{searchBean.movie.director}">			
+		</h:outputText><br></br>
+		<img src="#{searchBean.movie.poster}"></img><br></br>
+		
+		
+		<h:commandButton value="add to favourite movie" action="#{movieRepository.addfavouriteMovieList}" /><br></br>
+		
+
+
+	</h:form>
+
+
+
+
+
+</h:body>
+
+</html>
